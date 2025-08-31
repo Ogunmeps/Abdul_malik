@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Oguns Construction Co.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', Arial, sans-serif;
+        background: #f4f4f4;
+        color: #222;
+    }
+    body {
+        min-height: 100vh;
+    }
+    nav {
+        width: 100%;
+        background: #181818ee;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .nav-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 32px;
+        height: 70px;
+    }
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .nav-logo img {
+        height: 44px;
+        width: 44px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .nav-logo span {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #ffd700;
+        letter-spacing: 1px;
+    }
+    .nav-links {
+        display: flex;
+        gap: 32px;
+    }
+    .nav-links a {
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+        font-size: 1.08rem;
+        letter-spacing: 0.5px;
+        padding: 8px 16px;
+        border-radius: 6px;
+        transition: background 0.2s, color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+        background: #ffd700;
+        color: #181818;
+    }
+    .hero {
+        background-image: linear-gradient(rgba(24,24,24,0.55), rgba(24,24,24,0.45)), url('images/about background.webp');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 120px 0 60px 0;
+        text-align: center;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+        margin-top: 70px;
+        position: relative;
+    }
+    .hero img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #ffd700;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+        margin-bottom: 18px;
+        background: #fff;
+    }
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    .hero p {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+        font-weight: 400;
+    }
+    .about {
+        max-width: 900px;
+        margin: 48px auto 0 auto;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+        padding: 40px 32px 32px 32px;
+        text-align: center;
+    }
+    .about h2 {
+        color: #ffd700;
+        font-size: 2.2rem;
+        margin-bottom: 18px;
+        font-weight: 600;
+    }
+    .about p {
+        font-size: 1.18rem;
+        color: #333;
+        line-height: 1.7;
+    }
+    .gallery {
+        max-width: 1100px;
+        margin: 48px auto 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 28px;
+        padding: 0 16px;
+    }
+    .gallery img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 14px;
+        box-shadow: 0 2px 14px rgba(0,0,0,0.16);
+        transition: transform 0.22s, box-shadow 0.22s;
+        border: 2px solid #fff;
+        background: #eee;
+    }
+    .gallery img:hover {
+        transform: scale(1.045) rotate(-1deg);
+        box-shadow: 0 6px 24px rgba(0,0,0,0.22);
+        border-color: #ffd700;
+    }
+    .footer {
+        width: 100%;
+        background: #181818;
+        color: #fff;
+        text-align: center;
+        padding: 28px 0 16px 0;
+        font-size: 1.13rem;
+        margin-top: 56px;
+        letter-spacing: 0.5px;
+        box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+    }
+    @media (max-width: 700px) {
+        .nav-content {
+            flex-direction: column;
+            gap: 10px;
+            height: auto;
+            padding: 0 10px;
+        }
+        .hero {
+            padding: 80px 0 40px 0;
+        }
+        .about {
+            padding: 24px 8px 18px 8px;
+        }
+        .gallery {
+            gap: 14px;
+        }
+        .gallery img {
+            height: 140px;
+        }
+    }
+    </style>
+</head>
+<body>
+      <nav>
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <img src="images/change the name to o.png" alt="Oguns Construction Logo">
+                    <span>Oguns Construction</span>
+                </div>
+                <div class="nav-links">
+                    <a href="home.html" class="active">HOME</a>
+                    <a href="services.html">SERVICES</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="contact.html">CONTACT</a>
+                    <a href="portfolio.html">PORTFOLIO</a>
+                </div>
+            </div>
+        </nav>
+<div class="hero">
+    <img src="images/change the name to o.png" alt="Oguns Construction Logo">
+    <h1>Comprehensive Construction Services</h1>
+    <p>From Blueprint to Reality — We Build with Precision</p>
+</div>
+
+
+<div style="display: flex; justify-content: center; margin: 24px 0;">
+    <a href="contact.html" style="font-weight:600; padding:12px 32px; border-radius:8px; background:#ffd700; color:#181818; text-decoration:none;">Request Our Services</a>
+</div>
+
+
+<h2 align="center">Our Core Services</h2>
+<ul style="max-width:900px; margin:0 auto; font-size:1.1rem; line-height:1.8;">
+    <li><strong>Design-Build Solutions:</strong> Seamless integration of design and construction.</li>
+    <li><strong>General Contracting:</strong> Reliable execution with budget and timeline control.</li>
+    <li><strong>Project Management:</strong> End-to-end oversight for quality and safety.</li>
+    <li><strong>Renovation & Remodeling:</strong> Modern upgrades for existing structures.</li>
+    <li><strong>Infrastructure Development:</strong> Roads, bridges, and public works.</li>
+    <li><strong>Green Building:</strong> LEED-certified sustainable construction.</li>
+</ul>
+
+
+<section style="background:#fff; padding:40px 20px; margin:48px auto; max-width:900px; border-radius:16px; box-shadow:0 2px 16px rgba(0,0,0,0.1);">
+    <h2 align="center" style="color:#ffd700;">Client Testimonials</h2>
+    <p><em>"Oguns Construction delivered our project ahead of schedule and under budget. Their professionalism is unmatched!"</em> – Sarah A., Lagos</p>
+    <p><em>"From design to execution, their team was responsive and detail-oriented. Highly recommended."</em> – Emeka O., Abuja</p>
+</section>
+
+
+<section style="max-width:900px; margin:48px auto; text-align:center;">
+    <h2 style="color:#ffd700;">Featured Project: Lekki Office Complex</h2>
+    <p>We transformed a vacant lot into a state-of-the-art office facility in just 8 months. See how we tackled zoning, design, and construction challenges.</p>
+    <a href="portfolio.html" style="font-weight:600; padding:10px 28px; border-radius:8px; text-decoration:none; background:#ffd700; color:#181818;">View Portfolio</a>
+</section>
+
+
+
+
+<section style="max-width:900px; margin:48px auto; text-align:center;">
+    <h2 style="color:#ffd700;">Insights & Resources</h2>
+    <p>Stay informed with expert tips and industry trends.</p>
+</section>
+
+
+<section class="gallery">
+    <img src="images/1.webp" alt="Modern residential building project by Oguns Construction">
+            <img src="images/2.webp" alt="Commercial construction site">
+            <img src="images/3.webp" alt="Team at work on a large-scale project">
+            <img src="images/4.webp" alt="Completed office building">
+            <img src="images/2f5ab313-66c8-4dca-bff5-495ab209a4d6.jpg" alt="Construction machinery in action">
+            <img src="images/7.jpg" alt="Oguns Construction staff group photo">
+</section>
+
+
+
+
+
+<div style="display: flex; justify-content: center; margin: 24px 0;">
+    <a href="contact.html" style="font-weight:600; padding:12px 32px; border-radius:8px; background:#ffd700; color:#181818; text-decoration:none;">Schedule a Free Consultation</a>
+</div>
+  <div class="footer">
+            &copy; 2025 Oguns Construction Co. All rights reserved.
+        </div>
+    </body>
+</html>

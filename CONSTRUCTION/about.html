@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Oguns Construction Co.</title>
+
+    <style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', Arial, sans-serif;
+        background: #f4f4f4;
+        color: #222;
+    }
+    body {
+        min-height: 100vh;
+    }
+    nav {
+        width: 100%;
+        background: #181818ee;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .nav-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 32px;
+        height: 70px;
+    }
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .nav-logo img {
+        height: 44px;
+        width: 44px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .nav-logo span {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #ffd700;
+        letter-spacing: 1px;
+    }
+    .nav-links {
+        display: flex;
+        gap: 32px;
+    }
+    .nav-links a {
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+        font-size: 1.08rem;
+        letter-spacing: 0.5px;
+        padding: 8px 16px;
+        border-radius: 6px;
+        transition: background 0.2s, color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+        background: #ffd700;
+        color: #181818;
+    }
+    .hero {
+        background-image: linear-gradient(rgba(24,24,24,0.55), rgba(24,24,24,0.45)), url(images/ALEX_NYE_ELAC-G8_001-Stars.webp);
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 120px 0 60px 0;
+        text-align: center;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+        margin-top: 70px;
+        position: relative;
+    }
+    .hero img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #ffd700;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+        margin-bottom: 18px;
+        background: #fff;
+    }
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    .hero p {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+        font-weight: 400;
+    }
+    .about {
+        max-width: 900px;
+        margin: 48px auto 0 auto;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+        padding: 40px 32px 32px 32px;
+        text-align: center;
+    }
+    .about h2 {
+        color: #ffd700;
+        font-size: 2.2rem;
+        margin-bottom: 18px;
+        font-weight: 600;
+    }
+    .about p {
+        font-size: 1.18rem;
+        color: #333;
+        line-height: 1.7;
+    }
+    .gallery {
+        max-width: 1100px;
+        margin: 48px auto 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 28px;
+        padding: 0 16px;
+    }
+    .gallery img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 14px;
+        box-shadow: 0 2px 14px rgba(0,0,0,0.16);
+        transition: transform 0.22s, box-shadow 0.22s;
+        border: 2px solid #fff;
+        background: #eee;
+    }
+    .gallery img:hover {
+        transform: scale(1.045) rotate(-1deg);
+        box-shadow: 0 6px 24px rgba(0,0,0,0.22);
+        border-color: #ffd700;
+    }
+    .footer {
+        width: 100%;
+        background: #181818;
+        color: #fff;
+        text-align: center;
+        padding: 28px 0 16px 0;
+        font-size: 1.13rem;
+        margin-top: 56px;
+        letter-spacing: 0.5px;
+        box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+    }
+    @media (max-width: 700px) {
+        .nav-content {
+            flex-direction: column;
+            gap: 10px;
+            height: auto;
+            padding: 0 10px;
+        }
+        .hero {
+            padding: 80px 0 40px 0;
+        }
+        .about {
+            padding: 24px 8px 18px 8px;
+        }
+        .gallery {
+            gap: 14px;
+        }
+        .gallery img {
+            height: 140px;
+        }
+    }
+    </style>
+</head>
+<body>
+        <nav>
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <img src="images/change the name to o.png" alt="Oguns Construction Logo">
+                    <span>Oguns Construction</span>
+                </div>
+                <div class="nav-links">
+                    <a href="home.html" class="active">HOME</a>
+                    <a href="services.html">SERVICES</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="contact.html">CONTACT</a>
+                    <a href="portfolio.html">PORTFOLIO</a>
+                </div>
+            </div>
+        </nav>
+        <div class="hero">
+            <img src="images/change the name to o.png" alt="">
+            <h1>Building the Future, One Project at a Time</h1>
+            <p>Excellence in Construction & Engineering</p>
+        </div>
+
+        
+        <div style="text-align: center; max-width: 600px; margin: auto;">
+  <h2>Our Story</h2>
+  <h3>Oguns Construction Celebrates 5 Golden Years of Building Excellence!</h3>
+  <p>
+    For five years, Oguns Construction has been a cornerstone of innovation and quality in the construction industry.
+    Founded in 2018 by visionary leader Ron Oguns,
+    the company has flourished under the guidance of current Owner and President, Aderounmu Abdulmalik.
+  </p>
+</div>
+
+<div style="text-align: center; max-width: 600px; margin: auto;">
+            <h3>We Offer a Wide Range of Services</h3>
+            <p>
+                From conception to completion, our entire team of estimators,
+                designers, project managers and experienced executives make our clients’ needs a priority.
+                We have experience in a wide variety of projects and delivery methods,
+                and use both time-proven practices and cutting-edge techniques to make 
+                sure our customers’ projects meet their maximum potential.
+            </p>
+            </div>
+
+
+            <div style="text-align: center; max-width: 600px; margin: auto;">
+            <h3>Experience You Can Trust, Delivered on Every Project</h3>
+            <P>At Oguns Construction, we understand that your project is more than just bricks and mortar. 
+                It's a vision, an investment, 
+                and a reflection of your dreams. That's why we place the most experienced construction
+                 professionals at the helm of every project we undertake.
+                 We're not just building structures,
+                we're building trust. For 5 years,
+               we've consistently delivered the best value in building services, 
+               and we're here to continue that legacy for you.
+            </P>
+            <h3>Join us in celebrating this momentous occasion!</h3>
+            <p>We're incredibly grateful for the opportunity to serve our community for the past 5 years.
+                We look forward to continuing to build a brighter future, together.</p>
+ </div>
+       
+        <div class="footer">
+            &copy; 2025 Oguns Construction Co. All rights reserved.
+        </div>
+</body>
+</html>
